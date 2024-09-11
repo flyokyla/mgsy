@@ -1,13 +1,13 @@
 import pandas
 
-x = pandas.read_csv("/home/okyla/main/mgsy/vichMAT/data.csv")
+x = pandas.read_csv("/home/okyla/main/mgsy/bolshDAN/data.csv")
 k1 = 0
 s2 = []
 k3 =0
 s3 = 0 
 
 for i in range(0,1000):
-    if(x['parental level of education'][i]=="master's degree"): k1+=1
+    if(x['parental level of education'][i]=="master's degree") and (x['gender'][i]=="female"): k1+=1
     if (x['math score'][i]==max(x['math score'])):s2.append(x['reading score'][i])
     if (x['writing score'][i]>90): 
         s3+=1 
